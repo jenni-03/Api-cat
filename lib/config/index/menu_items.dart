@@ -19,7 +19,7 @@ class MenuItem {
     MenuItem(
       title: 'Cat Api', 
       subtitle: 'Here you can find out about all the existing cat breeds', 
-      link: 'link', 
+      link: '/landing', 
       icon: Icons.pets_rounded,
     ),
   ];

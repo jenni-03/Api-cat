@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
 import 'package:widgets_app/presentation/screens/home/home_screen.dart';
+import 'package:widgets_app/presentation/screens/landing/landing_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,6 +16,10 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 1).getTheme(),
       home: const HomeScreen(),
+      routes: {
+        '/landing': (context) => const LandingScreen(),
+        //añadir las rutas de las otras screens
+      },
     );
   }
 }

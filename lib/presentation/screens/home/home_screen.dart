@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/index/menu_items.dart';
+import 'package:widgets_app/presentation/screens/landing/landing_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+//Muestra cada item en el home
 class _HomeView extends StatelessWidget {
   const _HomeView();
 
@@ -32,6 +34,7 @@ class _HomeView extends StatelessWidget {
   }
 }
 
+//Obtiene cada item y lo envia al home
 class _CustomListTitle extends StatelessWidget {
   const _CustomListTitle({
     required this.menuItem,
@@ -41,17 +44,29 @@ class _CustomListTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final colors = Theme.of(context).colorScheme;
 
     return ListTile(
-      leading: Icon(menuItem.icon, color: colors.primary, size: 40,),
-      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary,),
+      leading: Icon(
+        menuItem.icon,
+        color: colors.primary,
+        size: 40,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        color: colors.primary,
+      ),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
       //navegar a otra pantalla
-      onTap: (){
-
+      onTap: () {
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => const LandingScreen()
+        //   ),
+        // );
+        Navigator.pushNamed(context, menuItem.link);
       },
     );
   }

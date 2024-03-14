@@ -8,21 +8,25 @@ final appRouter = GoRouter(
 
     GoRoute(
       path: '/',
+      name: HomeScreen.name,
       builder: (context, state) => const HomeScreen(),
     ),
 
     GoRoute(
       path: '/landing',
+      name: LandingScreen.name,
       builder: (context, state) => const LandingScreen(),
     ),
 
     GoRoute(
       path: '/detail',
+      name: DetailScreen.name,
       builder: (context, state) => const DetailScreen(),
     ),
 
     GoRoute(
       path: '/detail-scroll',
+      name: DetailScrollScreen.name,
       builder: (context, state) => const DetailScrollScreen(),
     ),
 

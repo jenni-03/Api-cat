@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/index/menu_items.dart';
+import 'package:widgets_app/presentation/screens/landing/landing_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
+
   const HomeScreen({super.key});
 
   @override
@@ -67,7 +70,9 @@ class _CustomListTitle extends StatelessWidget {
         //   ),
         // );
         //Navigator.pushNamed(context, menuItem.link);
-        context.push(menuItem.link);
+
+        //context.push(menuItem.link);
+        context.pushNamed(LandingScreen.name);
       },
     );
   }

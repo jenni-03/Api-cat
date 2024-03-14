@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class LandingScreen extends StatelessWidget {
+
+  static const String name = 'landing_screen';
+
   const LandingScreen({super.key});
 
   @override

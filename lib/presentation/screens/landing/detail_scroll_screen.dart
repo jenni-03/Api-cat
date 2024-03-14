@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class DetailScrollScreen extends StatelessWidget {
+
+  static const String name = 'detail_scroll_screen';
+
   const DetailScrollScreen({super.key});
 
   @override

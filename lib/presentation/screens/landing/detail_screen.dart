@@ -10,7 +10,7 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('landing screen'),
+        title: Text('detail screen'),
       ),
     );
   }
